@@ -1,0 +1,8 @@
+api_version = "2026-07"
+uid = "1c386212-fe93-a132-d243-561dd376ae3f290a7a3c"
+
+[[extensions]]
+name = "iAgents Chat Widget"
+handle = "iagents-chat-widget"
+type = "theme"
+

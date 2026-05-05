@@ -1,0 +1,25 @@
+{% assign cfg = shop.metafields.app.widget_config.value %}
+
+{% if cfg and cfg.enabled != false %}
+<script
+  src="https://dashboard.iagents.pro/widget/iagents-chat.js?v=4"
+  data-agent-id="{{ cfg.agentId }}"
+  data-title="{{ cfg.title }}"
+  data-subtitle="{{ cfg.subtitle }}"
+  data-color="{{ cfg.color }}"
+  data-position="{{ cfg.position }}"
+  data-welcome="{{ cfg.welcome }}"
+  data-theme="{{ cfg.theme }}"
+  data-source="{{ cfg.source }}"
+  data-channel="{{ cfg.channel }}"
+  async>
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "iAgents Chat Widget",
+  "target": "body",
+  "settings": []
+}
+{% endschema %}
