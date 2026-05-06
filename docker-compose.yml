@@ -29,8 +29,8 @@ services:
       SHOPIFY_APP_URL: ${SHOPIFY_APP_URL}
       SCOPES: ${SCOPES}
       TOKEN_NOTIFY_URL: ${TOKEN_NOTIFY_URL}
-    ports:
-      - "${APP_PORT:-3000}:3000"
+    expose:
+      - "3000"
 
 volumes:
   db_data:
