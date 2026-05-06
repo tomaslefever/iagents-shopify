@@ -3,7 +3,7 @@
 client_id = "c27436a8a382d3d3d3d4736ab102021a"
 name = "iAgents Connector"
 handle = "iagents-connector"
-application_url = "https://dashboard.iagents.pro"
+application_url = "https://iagents-shopify-auth.98uxik.easypanel.host"
 embedded = true
 
 [build]
