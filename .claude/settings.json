@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git rm *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git commit -m 'Point token notification to n8n webhook *)"
     ]
   }
 }
