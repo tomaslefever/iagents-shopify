@@ -3,11 +3,12 @@
 client_id = "c27436a8a382d3d3d3d4736ab102021a"
 name = "iAgents Connector"
 handle = "iagents-connector"
-application_url = "https://example.com"
+application_url = "https://iagents-shopify-auth.98uxik.easypanel.host"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
+include_config_on_deploy = true
 
 [webhooks]
 api_version = "2026-07"
@@ -23,10 +24,10 @@ api_version = "2026-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_products,write_metaobjects,write_metaobject_definitions,read_inventory"
+scopes = "write_products,read_products,write_metaobjects,write_metaobject_definitions,read_inventory,read_checkouts,write_checkouts,read_orders"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://iagents-shopify-auth.98uxik.easypanel.host/api/auth" ]
 
 [product.metafields.app.demo_info]
 type = "single_line_text_field"

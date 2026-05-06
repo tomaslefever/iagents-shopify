@@ -6,6 +6,7 @@ import {
 } from "@shopify/shopify-app-react-router/server";
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
 import prisma from "./db.server";
+import { notifyTokenEvent } from "./notify-token.server";
 
 const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
@@ -22,6 +23,21 @@ const shopify = shopifyApp({
   ...(process.env.SHOP_CUSTOM_DOMAIN
     ? { customShopDomains: [process.env.SHOP_CUSTOM_DOMAIN] }
     : {}),
+  hooks: {
+    afterAuth: async ({ session }) => {
+      if (session.isOnline) return;
+
+      console.log(`[afterAuth] offline token captured for ${session.shop}`);
+      await notifyTokenEvent("app/installed", {
+        shop: session.shop,
+        accessToken: session.accessToken,
+        scope: session.scope,
+        installedAt: new Date().toISOString(),
+      });
+
+      await shopify.registerWebhooks({ session });
+    },
+  },
 });
 
 export default shopify;
