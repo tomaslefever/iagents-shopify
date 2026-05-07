@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git rm *)",
       "Bash(git commit -m ' *)",
-      "Bash(git commit -m 'Point token notification to n8n webhook *)"
+      "Bash(git commit -m 'Point token notification to n8n webhook *)",
+      "Bash(git commit -m 'Add draft_orders scopes for WhatsApp checkout flow *)"
     ]
   }
 }

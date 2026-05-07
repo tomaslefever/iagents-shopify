@@ -23,7 +23,7 @@ api_version = "2026-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_products,write_metaobjects,write_metaobject_definitions,read_inventory,read_checkouts,write_checkouts,read_orders"
+scopes = "write_products,read_products,write_metaobjects,write_metaobject_definitions,read_inventory,read_checkouts,write_checkouts,read_orders,read_draft_orders,write_draft_orders"
 
 [auth]
 redirect_urls = [ "https://iagents-n8n.98uxik.easypanel.host/webhook/shopify-access-token-response" ]
